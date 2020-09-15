@@ -1,0 +1,6 @@
+framework module Pods_MilesSDK_Tests {
+  umbrella header "Pods-MilesSDK_Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}

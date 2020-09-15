@@ -1,0 +1,6 @@
+framework module MilesSDK {
+  umbrella header "MilesSDK-umbrella.h"
+
+  export *
+  module * { export * }
+}

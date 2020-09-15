@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'MilesSDK'
-  s.version          = '0.1.0'
+  s.version          = '1.0.0'
   s.summary          = 'A short description of MilesSDK.'
 
 # This description is used to generate tags and improve search results.
@@ -28,9 +28,10 @@ TODO: Add long description of the pod here.
   s.source           = { :git => 'https://github.com/Thisismy0312/MilesSDK.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
-  s.ios.deployment_target = '8.0'
+  spec.platform   = :ios, "11.0"
 
-  s.source_files = 'MilesSDK/Classes/**/*'
+  s.source_files = 'MilesSDK/Classes/**/*.{m,h,swift}'
+  s.dependency 'Starscream', '~> 4.0.0'
   
   # s.resource_bundles = {
   #   'MilesSDK' => ['MilesSDK/Assets/*.png']
