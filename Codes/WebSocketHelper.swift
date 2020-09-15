@@ -10,7 +10,7 @@ import Foundation
 import Starscream
 import UIKit
 
-class WebSocketHelper {
+open class WebSocketHelper {
     
     var index = 0
     var socket: WebSocket?
@@ -33,7 +33,7 @@ class WebSocketHelper {
     }
     var pingCount = 0
     
-    init() {
+    public init() {
         
     }
     
@@ -48,7 +48,7 @@ class WebSocketHelper {
         }
     }
     
-    init(baseurl: String) {
+    public init(baseurl: String) {
         guard let url = URL(string: baseurl) else { return }
         var request = URLRequest(url: url)
         request.timeoutInterval = 10
@@ -59,7 +59,7 @@ class WebSocketHelper {
     }
     
     // MARK: - 连接服务器
-    func connectServer() {
+    public func connectServer() {
         guard let websocket = socket else { return }
         let dict = [
             "msg": "connect",
@@ -80,7 +80,7 @@ class WebSocketHelper {
            - parameters:
                - token: 用户的Token
     */
-    func loginServer(_ token: String) {
+    public func loginServer(_ token: String) {
         guard let websocket = socket else { return }
         let dict = [
             "id": "1",
@@ -97,7 +97,7 @@ class WebSocketHelper {
     }
     
     // MARK: - 接入服务器
-    func subServer(_ id: String, _ myID: String) {
+    public func subServer(_ id: String, _ myID: String) {
         guard let websocket = socket else { return }
         let dict = ["id": id,
                     "msg": "sub",
@@ -114,7 +114,7 @@ class WebSocketHelper {
     }
     
     // MARK: - 发送信息
-    func sendMsg(_ id: String, _ msg: String, _ roomID: String) {
+    public func sendMsg(_ id: String, _ msg: String, _ roomID: String) {
         guard let websocket = socket else { return }
         let dict = ["msg": "method",
                     "method": "sendMessage",
@@ -133,7 +133,7 @@ class WebSocketHelper {
     }
     
     // MARK: - 获取历史消息
-    func getHistory(_ roomID: String, _ count: Int, _ timeInterval: Int? = nil) {
+    public func getHistory(_ roomID: String, _ count: Int, _ timeInterval: Int? = nil) {
         guard let websocket = socket else { return }
         
         var startTime: [String: Int]?
@@ -155,7 +155,7 @@ class WebSocketHelper {
     }
     
     // MARK: - 获取丢失的消息
-    func getMissHistory(_ roomID: String, _ timeInterval: Int) {
+    public func getMissHistory(_ roomID: String, _ timeInterval: Int) {
         guard let websocket = socket else { return }
         
         let startTime: [String: Int] = ["$date": timeInterval]
@@ -173,7 +173,7 @@ class WebSocketHelper {
     }
     
     // MARK: - 从服务器断开连接
-    func disconnectFromServer() {
+    public func disconnectFromServer() {
         isConnected = false
         guard let websocket = socket else { return }
         websocket.disconnect()
@@ -193,7 +193,7 @@ class WebSocketHelper {
         })
     }
     
-    func dictToJsonStr(_ dict: [String: Any]) -> String {
+    public func dictToJsonStr(_ dict: [String: Any]) -> String {
         let jsonData = try? JSONSerialization.data(withJSONObject: dict, options: [])
         guard let data = jsonData else { return "ERROR" }
         let jsonStr = String(data: data, encoding: .utf8)

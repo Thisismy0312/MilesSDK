@@ -28,7 +28,7 @@ TODO: Add long description of the pod here.
   s.source           = { :git => 'https://github.com/Thisismy0312/MilesSDK.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
-  s.platform   = :ios, "11.0"
+  s.platform   = :ios, "10.0"
 
   s.source_files = 'Codes/**/*.{m,h,swift}'
   s.dependency 'Starscream', '~> 4.0.0'

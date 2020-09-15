@@ -12,7 +12,7 @@ import SwiftyJSON
 
 // MARK: - WebSocket Handler
 extension IMTableView: WebSocketDelegate {
-    func didReceive(event: WebSocketEvent, client: WebSocket) {
+    public func didReceive(event: WebSocketEvent, client: WebSocket) {
         switch event {
         case .connected(let headers):
             socket.isConnected = true
@@ -58,12 +58,12 @@ extension IMTableView: WebSocketDelegate {
     }
     
     // MARK: - 连接失败
-    func disconnect() {
+    public func disconnect() {
         socket.disconnectFromServer()
     }
     
     // MARK: - 消息处理
-    func handleMessage(_ msg: String) {
+    public func handleMessage(_ msg: String) {
         let jsondata = JSON(parseJSON: msg)
         
         let type = jsondata["msg"].stringValue

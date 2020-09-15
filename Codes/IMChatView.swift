@@ -27,7 +27,7 @@ open class IMChatView: UIView {
     private var placeHoderColor: UIColor = .lightGray
     private var textColor: UIColor = .white
     
-    var completeAction: (() -> Void)? {
+    public var completeAction: (() -> Void)? {
         get {
             return messageTable.completeAction
         }
@@ -37,7 +37,7 @@ open class IMChatView: UIView {
         }
     }
     
-    override init(frame: CGRect) {
+    public override init(frame: CGRect) {
         super.init(frame: frame)
         
         if #available(iOS 11.0, *) {

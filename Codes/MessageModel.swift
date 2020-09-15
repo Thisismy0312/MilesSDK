@@ -7,7 +7,7 @@
 //
 
 import Foundation
-struct MessageModel: Equatable, Codable, Hashable {
+public struct MessageModel: Equatable, Codable, Hashable {
     var msgID: String = ""
     var name: String = ""
     var message: String = ""
