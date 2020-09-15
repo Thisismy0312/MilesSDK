@@ -39,7 +39,8 @@ TODO: Add long description of the pod here.
   # s.resource_bundles = {
   #  'MilesSDK' => ['MilesSDK/Assets/*.{xcassets}']
   # }
-  s.resources = 'MilesSDK/Assets/*.{xcassets}'
+  s.resources = ['MilesSDK/Assets/*.{xcassets}',
+                 'MilesSDK/Assets/*.{json}']
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
