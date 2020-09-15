@@ -7,12 +7,19 @@
 //
 
 import UIKit
+import MilesSDK
 
 class ViewController: UIViewController {
-
+    
+    let chatView = IMChatView()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        var uiConfig = UnifyUIConfig()
+        var dataConfig = UnifyDataConfig()
+        
     }
 
     override func didReceiveMemoryWarning() {

@@ -1,15 +1,30 @@
 PODS:
-  - MilesSDK (0.1.0)
+  - lottie-ios (3.1.8)
+  - MilesSDK (1.0.0):
+    - lottie-ios
+    - Starscream (~> 4.0.0)
+    - SwiftyJSON
+  - Starscream (4.0.4)
+  - SwiftyJSON (5.0.0)
 
 DEPENDENCIES:
   - MilesSDK (from `../`)
+
+SPEC REPOS:
+  trunk:
+    - lottie-ios
+    - Starscream
+    - SwiftyJSON
 
 EXTERNAL SOURCES:
   MilesSDK:
     :path: "../"
 
 SPEC CHECKSUMS:
-  MilesSDK: aaef994c0b271d7ffcbcf472dc9246a3dac2786e
+  lottie-ios: 48fac6be217c76937e36e340e2d09cf7b10b7f5f
+  MilesSDK: a4878b27b2630de6c4eb8e4987599ed99446ac67
+  Starscream: 5178aed56b316f13fa3bc55694e583d35dd414d9
+  SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
 
 PODFILE CHECKSUM: 59d3a67c81e06dc5d15616050aa3c5f697b4c353
 
