@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'MilesSDK_Example' do
+  pod 'MilesSDK', :path => '../'
+
+  target 'MilesSDK_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
