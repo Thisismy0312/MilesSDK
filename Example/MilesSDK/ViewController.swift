@@ -53,7 +53,8 @@ class ViewController: UIViewController {
         view.addSubview(chatView)
         
         self.automaticallyAdjustsScrollViewInsets = false
-        
+
+        self.showSpinner(onView: self.view)
         chatView.cleanHistory()
         requestService()
         didDisapper = false
@@ -81,6 +82,10 @@ extension ViewController {
             .setPreLoadHistoryCount(count: 10)
         
         self.chatView.buildConnection(config: dataconfig)
+        
+        self.chatView.completeAction = {
+            self.removeSpinner()
+        }
     }
 }
 

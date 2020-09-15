@@ -31,10 +31,9 @@
     ]
   },
   "swift_versions": "5.0",
-  "resource_bundles": {
-    "MilesSDK": [
-      "MilesSDK/Assets/*.xcassets"
-    ]
-  },
+  "resources": [
+    "MilesSDK/Assets/*.{xcassets}",
+    "MilesSDK/Assets/*.{json}"
+  ],
   "swift_version": "5.0"
 }
