@@ -36,9 +36,9 @@ TODO: Add long description of the pod here.
   s.dependency 'SwiftyJSON'
   s.swift_version= '5.0'
   
-  # s.resource_bundles = {
-  #   'MilesSDK' => ['MilesSDK/Assets/*.png']
-  # }
+  s.resource_bundles = {
+    'MilesSDK' => ['MilesSDK/Assets/*.xcassets']
+  }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
